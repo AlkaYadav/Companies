@@ -1,0 +1,14 @@
+/*
+ * mnGrid.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+#define ROW 100
+#define COL 100
+
+void minPath(int arr[ROW][COL],int rows,int cols){
+
+}
+
+

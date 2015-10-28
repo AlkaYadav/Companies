@@ -1,0 +1,12 @@
+/*
+ * subsetSum.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+void subsetSum(int arr[],int sum,int n){
+	bool subSum[sum+1][n+1];
+}
+
+

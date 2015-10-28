@@ -1,0 +1,18 @@
+/*
+ * minJumps.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+void minJumps(int grid[ROWS][COLS],int rows,int cols){
+	int jumps[rows][cols];
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			jumps[i][j]=0;
+		}
+	}
+
+}
+
+

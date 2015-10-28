@@ -1,0 +1,13 @@
+/*
+ * middleNode.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+struct linkedNode{
+	int data;
+	struct linkedNode* next;
+};
+
+

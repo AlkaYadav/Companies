@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LinkedIn/src/LinkedIn.cpp&apos; to &apos;bitComplement.cpp&apos;" description="Rename resource &apos;LinkedIn.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/LinkedIn.cpp" name="bitComplement.cpp" stamp="1445864299767" updateReferences="true"/>
+</session>

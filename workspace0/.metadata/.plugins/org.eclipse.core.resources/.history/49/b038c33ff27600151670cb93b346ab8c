@@ -1,0 +1,91 @@
+/*
+ * palinPartition.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<string>
+#include<limits.h>
+using namespace std;
+
+void minimumPalnPartition(string str){
+	int len=str.length();
+	bool P[len][len];
+	int C[len][len];
+	for(int i=0;i<len;i++){
+		for(int j=0;j<len;j++){
+			P[i][j]=false;
+			C[i][j]=INT_MAX;
+		}
+	}
+	for(int i=0;i<len;i++){
+		P[i][i]=true;
+		C[i][i]=0;
+	}
+
+	for(int L=2;L<=len;L++){
+		for(int i=0;i<=len-L;i++){
+			int j=i+L-1;
+			if(str[i]==str[j]){
+				if(L==2){
+					P[i][j]=true;
+					C[i][j]=0;
+				}
+				else{
+					P[i][j]= P[i+1][j-1];
+				}
+			}
+
+			if(P[i][j]==true){
+				C[i][j]=0;
+			}
+			else{
+				for(int k=i;k<=j-1;k++){
+					C[i][j]=min(C[i][j],C[i][k]+C[k+1][j]+1);
+				}
+			}
+		}
+	}
+
+	cout<<"Minimum cuts "<<C[0][len-1]<<endl;
+}
+
+void minCutsOptimized(string str){
+	int len=str.length();
+	int P[len][len];
+	for(int i=0;i<len;i++){
+		for(int j=0;j<len;j++){
+			P[i][j]=false;
+		}
+	}
+	for(int i=0;i<len;i++){
+		P[i][i]=true;
+	}
+	for(int L=2;L<=len;L++){
+		for(int i=0;i<=len-L;i++){
+			int j=i+L-1;
+			if(str[i]==str[j]){
+				if(L==2){
+					P[i][j]=true;
+				}
+				else{
+					P[i][j]=P[i+1][j-1];
+				}
+			}
+		}
+	}
+
+	int C[n];
+	C[0]=0;
+	for(int i=1;i<len;i++){
+		C[i]=INT_MAX;
+		for(int j=)
+	}
+}
+int main()
+{
+   string str = "ababbbabbababa";
+   minimumPalnPartition(str);
+}

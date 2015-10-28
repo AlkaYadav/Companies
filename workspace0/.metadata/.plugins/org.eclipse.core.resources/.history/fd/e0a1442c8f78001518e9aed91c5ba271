@@ -1,0 +1,25 @@
+/*
+ * minSwap.cpp
+ *
+ *  Created on: Oct 22, 2015
+ *      Author: user
+ */
+
+//given an array 0 1 2 3 find min number of ways to convert it into 1 0 2 3. Allowed
+//operations are, you can only swap an element with the 0 element.
+
+//Convert A to B
+void minimumSwaps(int A[],int B[],int len){
+	int i=len-1;
+	int j=i;
+	while(i>=0&& j>=0){
+		if(A[i]==B[j]){
+			i--;
+			j--;
+		}
+		else{
+			swap(B[j],B[0]);
+
+		}
+	}
+}

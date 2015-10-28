@@ -1,0 +1,20 @@
+/*
+ * test.cpp
+ *
+ *  Created on: Oct 18, 2015
+ *      Author: user
+ */
+
+#include<sstream>
+#include<iostream>
+using namespace std;
+int main(){
+	int num=-123;
+	ostringstream convert;
+	string s;
+	convert<<num;
+	s=convert.str();
+cout<<s<<endl;
+}
+
+

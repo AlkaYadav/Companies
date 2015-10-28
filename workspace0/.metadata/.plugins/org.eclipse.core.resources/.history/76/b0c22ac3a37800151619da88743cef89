@@ -1,0 +1,14 @@
+/*
+ * bitonic.cpp
+ *
+ *  Created on: Oct 22, 2015
+ *      Author: user
+ */
+
+
+void bitonic(int a[],int len){
+	int lis[len];
+	//First find lis
+
+}
+

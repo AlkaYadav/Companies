@@ -1,0 +1,18 @@
+//============================================================================
+// Name        : eBay.cpp
+// Author      : alkayadav
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+// Given the sequence 3, 4, 33, 34, 43, 44, 333, 334, 343, ... and a number 'n',
+//print the nth number in this sequence
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	return 0;
+}

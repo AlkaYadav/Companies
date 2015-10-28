@@ -1,0 +1,27 @@
+/*
+ * middleNode.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+
+struct linkedNode{
+	int data;
+	struct linkedNode* next;
+};
+
+
+struct node* middleNode(struct linkedNode* head){
+	if(head==NULL)
+		return NULL;
+	struct linkedNode* slow_ptr=head;
+	struct linkedNode* fast_ptr=head;
+	while(slow_ptr && fast_ptr && fast_ptr->next){
+		slow_ptr=slow_ptr->next;
+		fast_ptr=fast_ptr->next->next;
+	}
+}

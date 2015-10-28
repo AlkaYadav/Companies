@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;GeeksQuestions/src/shortestCommonSubseq.cpp&apos; to &apos;shortestCommonSuperseq.cpp&apos;" description="Rename resource &apos;shortestCommonSubseq.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/shortestCommonSubseq.cpp" name="shortestCommonSuperseq.cpp" stamp="1443420078517" updateReferences="true"/>
+</session>

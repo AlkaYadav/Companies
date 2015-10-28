@@ -1,0 +1,29 @@
+/*
+ * lexiPermutation.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+//lexicographically­smallest­permutation­given­a-signature
+#include <iostream>
+#include<vector>
+#include<climits>
+#include<algorithm>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+using namespace std;
+
+void lexicographic(string sig){
+	int len=sig.length();
+	string copy=sig;
+	sort(copy.begin(),copy.end());
+	do{
+		bool flag=assignAndCheck(copy);
+		if(flag){
+			cout<<copy<<break;
+		}
+	}
+}
+

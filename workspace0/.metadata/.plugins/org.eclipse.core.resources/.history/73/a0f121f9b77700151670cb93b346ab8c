@@ -1,0 +1,13 @@
+/*
+ * kthSmallestRowColSorted.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+///kth smallest element in a row wise and column wise sorted 2d arrays
+
+int kThSmallestRowColSorted(int arr[ROW][COL],int rows,int cols){
+	//Create of heap having element,<index i,index j>
+
+}

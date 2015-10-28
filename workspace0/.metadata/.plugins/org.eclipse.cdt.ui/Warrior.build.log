@@ -1,0 +1,14 @@
+02:01:57 **** Incremental Build of configuration Debug for project Warrior ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\minMST.o" "..\\src\\minMST.cpp" 
+..\src\minMST.cpp: In function 'int main()':
+..\src\minMST.cpp:26:21: warning: unused variable 'N' [-Wunused-variable]
+..\src\minMST.cpp:26:23: warning: unused variable 'M' [-Wunused-variable]
+..\src\minMST.cpp:26:25: warning: unused variable 'x' [-Wunused-variable]
+..\src\minMST.cpp:26:27: warning: unused variable 'y' [-Wunused-variable]
+..\src\minMST.cpp:26:29: warning: unused variable 'edge_no' [-Wunused-variable]
+g++ -o Warrior.exe "src\\prim.o" "src\\minMST.o" "src\\maxMST.o" "src\\Kruskal.o" 
+
+02:01:59 Build Finished (took 1s.845ms)
+

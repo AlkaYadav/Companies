@@ -1,0 +1,8 @@
+11:05:11 **** Incremental Build of configuration Debug for project Citrix ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Citrix.o" "..\\src\\Citrix.cpp" 
+g++ -o Citrix.exe "src\\Citrix.o" 
+
+11:05:13 Build Finished (took 1s.736ms)
+

@@ -1,0 +1,26 @@
+/*
+ * connectedIslands.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+#define ROW 100
+#define COL 100
+
+void connectedIslands(int a[ROW][COL],int m,int n){
+int visited[m][n];
+for(int i=0;i<m;i++){
+	for(int j=0;j<n;j++){
+		visited[i][j]=false;
+	}
+}
+
+for(int i=0;i<m;i++){
+	for(int j=0;j<n;j++){
+		if(visited[i][j]==false){
+			DFSUtil(a,visited,i,j,m,n);
+		}
+	}
+}
+}

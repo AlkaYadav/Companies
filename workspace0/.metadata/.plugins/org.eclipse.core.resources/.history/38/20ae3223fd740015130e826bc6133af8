@@ -1,0 +1,31 @@
+/*
+ * Grid.cpp
+ *
+ *  Created on: Oct 17, 2015
+ *      Author: user
+ */
+/*
+ * You are given an mxn grid , where (0,0) refers top most left position and (m1,
+n1)
+the bottom
+most right. The grid is filled with ones. All positions in the grid that are blocked are filled with
+zeros. You are given this grid and are assured that there exists at least one path from (0,0) to
+(m1,
+n1).
+Find the minimum distance of the path from (0,0) to (m1,
+n1)
+given that you are
+allowed to move only vertically, horizontally and diagonally.
+ */
+
+#include <iostream>
+#include<string>
+#include<climits>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+using namespace std;
+
+
+
+

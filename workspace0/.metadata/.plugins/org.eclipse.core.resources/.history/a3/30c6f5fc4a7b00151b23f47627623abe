@@ -1,0 +1,21 @@
+/*
+ * middleNode.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+
+struct linkedNode{
+	int data;
+	struct linkedNode* next;
+};
+
+
+struct node* middleNode(struct linkedNode* head){
+	if(head==NULL)
+		return NULL;
+}

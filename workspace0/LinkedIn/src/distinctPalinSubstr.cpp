@@ -1,0 +1,63 @@
+/*
+ * distinctPalinSubstr.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<map>
+using namespace std;
+
+void storeinMap(string str,int start,int end,map<string,int>& m){
+	string newstr;
+	for(int i=start;i<=end;i++){
+		newstr+=str[i];
+	}
+	m[newstr]++;
+
+}
+void distinctPalinSubstr(string str){
+	int len=str.length();
+	map<string,int> m;
+	bool table[len][len];
+	for(int i=0;i<len;i++){
+		for(int j=0;j<len;j++){
+			table[i][j]=false;
+		}
+	}
+	for(int i=0;i<len;i++){
+		table[i][i]=true;
+		storeinMap(str,i,i,m);
+	}
+	for(int L=2;L<=len;L++){
+		for(int i=0;i<=len-L;i++){
+			int j=i+L-1;
+			if(str[i]==str[j]){
+				if(L==2){
+					table[i][j]=true;
+				}
+				else{
+					table[i][j]=table[i+1][j-1];
+				}
+			}
+
+			if(table[i][j]){
+				storeinMap(str,i,j,m);
+			}
+		}
+	}
+
+   cout<<"Printing Map..."<<endl;
+   map<string,int>::iterator it;
+   for(it=m.begin();it!=m.end();it++){
+	   cout<<it->first<<endl;
+   }
+
+}
+
+
+int main(){
+	string str="aabaa";
+	distinctPalinSubstr(str);
+}

@@ -1,0 +1,74 @@
+/*
+ * fordFulkerson.cpp
+ *
+ *  Created on: Sep 29, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include <limits.h>
+#include <string.h>
+#include <queue>
+using namespace std;
+
+// Number of vertices in given graph
+#define V 6
+
+bool bfs(int graph[][V],bool visited[],int parent[],int src,int dest){
+	for(int i=0;i<V;i++){
+		visited[i]=false;
+		parent[i]=-1;
+	}
+	queue<int> q;
+	q.push(src);
+	visited[src]=true;
+	while(!q.empty()){
+		int top=q.front();
+		q.pop();
+		for(int i=0;i<V;i++){
+			if(graph[top][i]>0 && !visited[i]){
+				parent[i]=top;
+				q.push(top);
+			}
+		}
+	}
+	return visited[dest];
+}
+int fordFulkerson(int graph[][V], int src, int dest){
+	int parent[V];
+	bool visited[V];
+	for(int i=0;i<V;i++){
+		//parent[i]=-1;
+		visited[i]=false;
+	}
+	int maxflow=0;
+	while(bfs(graph,visited,parent,src,dest)){
+		int flow=INT_MAX;
+		for(int i=dest;i!=src;i=parent[i]){
+			if(graph[parent[i]][i]<flow){
+				flow=graph[parent[i]][i];
+			}
+		}
+
+		for(int i=dest;i!=src;i=parent[i]){
+			graph[parent[i]][i]-=flow;
+			graph[i][parent[i]]+=flow;
+		}
+		maxflow+=flow;
+	}
+	return maxflow;
+}
+int main()
+{
+    // Let us create a graph shown in the above example
+    int graph[V][V] = { {0, 16, 13, 0, 0, 0},
+                        {0, 0, 10, 12, 0, 0},
+                        {0, 4, 0, 0, 14, 0},
+                        {0, 0, 9, 0, 0, 20},
+                        {0, 0, 0, 7, 0, 4},
+                        {0, 0, 0, 0, 0, 0}
+                      };
+    cout << "The maximum possible flow is " << fordFulkerson(graph, 0, 5);
+
+        return 0;
+    }

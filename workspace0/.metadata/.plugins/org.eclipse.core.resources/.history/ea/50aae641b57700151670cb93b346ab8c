@@ -1,0 +1,11 @@
+/*
+ * setBits.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+//Given a number, return the number of set bits of the number if binary representation
+//of the number is a palindrome, else return 1.
+
+

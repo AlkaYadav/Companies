@@ -1,0 +1,73 @@
+/*
+ * powerOfMatrix.cpp
+ *
+ *  Created on: Oct 6, 2015
+ *      Author: user
+ */
+#include<iostream>
+using namespace std;
+void multiply(int A[][26],int B[][26]){
+	for(int i=0;i<26;i++){
+		for(int j=0;j<26;j++){
+			for(int k=0;k<26;k++){
+				A[i][j]+=A[i][k]*B[k][j];
+			}
+		}
+	}
+}
+
+void identityMatrix(int res[][26],int size){
+	for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+			if(i==j){
+				res[i][j]=1;
+			}
+			else{
+				res[i][j]=0;
+			}
+		}
+	}
+}
+void powerOfMatrix(int mat[][26],int n){
+	int res[26][26];
+	identityMatrix(res,26);
+	while(n-1){
+		if(n%2==0){
+			n=n/2;
+			multiply(mat,mat);
+		}
+		else{
+			n--;
+			multiply(res,mat);
+		}
+	}
+}
+
+void printMatrix(int mat[][26]){
+	for(int i=0;i<26;i++){
+		for(int j=0;j<26;j++){
+			cout<<mat[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+}
+int main(){
+	int mat[26][26];
+	for(int i=0;i<26;i++){
+		for(int j=0;j<26;j++){
+			cin>>mat[i][j];
+		}
+	}
+	int T;
+	char C;
+	long int L;
+	cin>>T;
+	while(T--){
+		cin>>C>>L;
+		powerOfMatrix(mat,L-1);
+		printMatrix(mat);
+	}
+}
+
+
+

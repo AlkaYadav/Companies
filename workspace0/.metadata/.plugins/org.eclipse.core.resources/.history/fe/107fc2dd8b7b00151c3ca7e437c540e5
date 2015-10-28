@@ -1,0 +1,60 @@
+/*
+ * reverseLinkedList.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+
+struct doublylinkedNode{
+	int data;
+	struct doublylinkedNode* next;
+	struct doublylinkedNode* prev;
+};
+
+struct doublylinkedNode* newnode(int data){
+	struct doublylinkedNode* new_n=(struct doublylinkedNode*)malloc(sizeof(struct doublylinkedNode));
+		new_n->next=NULL;
+		new_n->data=data;
+		return new_n;
+}
+
+struct doublylinkedNode* reverse(struct doublylinkedNode* root){
+	if(root==NULL||root->next==NULL){
+		return root;
+	}
+	struct doublylinkedNode* prev=NULL;
+	struct doublylinkedNode* next=root->next;
+	while(next){
+		next=root->next;
+		root->next=prev;
+		root->prev=next;
+		prev=root;
+	}
+	return prev;
+}
+void printList(struct doublylinkedNode* head){
+	while(head){
+		cout<<head->data<<"->";
+		head=head->next;
+	}
+	cout<<endl;
+}
+int main(){
+	struct doublylinkedNode* head=newnode(1);
+	struct doublylinkedNode* headnext=newnode(2);
+	struct doublylinkedNode* headnextnext=newnode(3);
+
+	head->next=headnext;
+	headnext->prev=head;
+	headnext->next=headnextnext;
+	headnextnext->prev=headnext;
+	printList(head);
+	struct doublylinkedNode* revHeadNode=reverse(head);
+	cout<<"Reverse head node "<<revHeadNode->data<<endl;
+	printList(revHeadNode);
+
+}

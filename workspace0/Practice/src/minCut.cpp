@@ -1,0 +1,111 @@
+/*
+
+ * minCut.cpp
+ *
+ *  Created on: Sep 29, 2015
+ *      Author: user
+
+#include <iostream>
+#include <limits.h>
+#include <string.h>
+#include <queue>
+using namespace std;
+
+// Number of vertices in given graph
+#define V 8
+
+void dfs(bool visited[],int rGraph[][V],int src){
+	visited[src]=true;
+	for(int i=0;i<V;i++){
+		if(rGraph[src][i] && !visited[i]){
+			dfs(visited,rGraph,i);
+		}
+	}
+}
+bool bfs(int rGraph[][V],int src,int dest,int parent[]){
+	queue<int> q;
+	bool visited[V];
+	for(int i=0;i<V;i++){
+		visited[i]=false;
+	}
+	parent[src]=-1;
+	q.push(src);
+	visited[src]=true;
+	while(!q.empty()){
+		int top=q.front();
+		q.pop();
+		for(int i=0;i<V;i++){
+			if(rGraph[top][i]>0 && !visited[i]){
+				parent[i]=top;
+				visited[i]=true;
+				q.push(i);
+			}
+		}
+	}
+
+	return visited[dest]==true;
+}
+void fordFulkerson(int graph[][V],int src,int dest){
+	int rGraph[V][V];
+	int parent[V];
+	bool visited[V];
+	for(int i=0;i<V;i++){
+		for(int j=0;j<V;j++){
+			rGraph[i][j]=graph[i][j];
+		}
+	}
+	int maxflow=0;
+	while(bfs(rGraph,src,dest,parent)){
+		int flow=INT_MAX;
+		for(int i=dest;i!=src;i=parent[i]){
+			if(rGraph[parent[i]][i]<flow){
+				flow=rGraph[parent[i]][i];
+			}
+		}
+
+		for(int i=dest;i!=src;i=parent[i]){
+			rGraph[parent[i]][i]-=flow;
+			rGraph[i][parent[i]]+=flow;
+		}
+		maxflow+=flow;
+	}
+
+	cout << "The min cut size is " <<maxflow<<endl;
+
+	for(int i=0;i<V;i++){
+		visited[i]=false;
+	}
+
+	dfs(visited,rGraph,src);
+
+	for(int i=0;i<V;i++){
+
+			for(int j=0;j<V;j++){
+				if(graph[i][j] && !visited[j] && visited[i]){
+					cout<<"Edge "<<i<<" "<<j<<endl;
+				}
+			}
+		}
+	}
+
+
+int main()
+{
+    // Let us create a graph shown in the above example
+    int graph[V][V] = {
+    		{0,1,1,1,1,1,1,0},
+    		{0,0, 1, 1, 0, 0, 0,1},
+            {0,1, 0, 0, 1, 0, 0,1},
+            {0,0, 0, 1, 0, 0, 0,1},
+            {0,0, 0, 1, 1, 0, 0,1},
+            {0,0, 0, 0, 0, 0, 0,1},
+            {0,0, 0, 0, 0, 0, 1,1},
+			{0,0,0,0,0,0,0,0}
+          }
+                      ;
+     fordFulkerson(graph, 0, 7);
+
+        return 0;
+    }
+
+*/

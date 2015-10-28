@@ -1,0 +1,13 @@
+/*
+ * transformStrings.cpp
+ *
+ *  Created on: Sep 30, 2015
+ *      Author: user
+ */
+
+
+void transformOneStringToAnother(string a,string b){
+	int len1=a.length();
+	int len2=b.length();
+}
+

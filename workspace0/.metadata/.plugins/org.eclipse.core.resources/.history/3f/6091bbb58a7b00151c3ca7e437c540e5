@@ -1,0 +1,29 @@
+/*
+ * reverseLinkedList.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+
+struct doublylinkedNode{
+	int data;
+	struct doublylinkedNode* next;
+	struct doublylinkedNode* prev;
+};
+
+struct doublylinkedNode* newnode(int data){
+	struct doublylinkedNode* new_n=(struct doublylinkedNode*)malloc(sizeof(struct doublylinkedNode));
+		new_n->next=NULL;
+		new_n->data=data;
+		return new_n;
+}
+
+struct doublylinkedNode* reverse(struct doublylinkedNode* root){
+
+}
+
+

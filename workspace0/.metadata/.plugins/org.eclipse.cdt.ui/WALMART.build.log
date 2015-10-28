@@ -1,0 +1,13 @@
+16:49:23 **** Rebuild of configuration Debug for project WALMART ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\stringConversion.o" "..\\src\\stringConversion.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\insertSpaces.o" "..\\src\\insertSpaces.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\farida.o" "..\\src\\farida.cpp" 
+..\src\farida.cpp: In function 'int main()':
+..\src\farida.cpp:19:7: error: 'T' was not declared in this scope
+..\src\farida.cpp:21:8: error: 'N' was not declared in this scope
+..\src\farida.cpp:24:9: error: 'a' was not declared in this scope
+
+16:49:28 Build Finished (took 5s.135ms)
+

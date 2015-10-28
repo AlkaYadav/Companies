@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Nutanix/src/Nutanix.cpp&apos; to &apos;postFrompreAndIn.cpp&apos;" description="Rename resource &apos;Nutanix.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Nutanix.cpp" name="postFrompreAndIn.cpp" stamp="1445088941063" updateReferences="true"/>
+</session>

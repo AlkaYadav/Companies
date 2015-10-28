@@ -1,0 +1,27 @@
+/*
+ * islandRowWiseColWise.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+
+//Count number of islands where every island is row-wise and column-wise separated
+#define ROW 100
+#define COL 100
+
+void islandRowWiseColWise(int a[ROW][COL],int rows,int cols){
+	int visited[ROW][COL];
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			visited[i][j]=false;
+		}
+	}
+
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+
+		}
+	}
+}
+

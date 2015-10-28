@@ -1,0 +1,35 @@
+/*
+ * Walprime.cpp
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+void calculateWalprime(string str){
+int len=str.length();
+int cnt=0,eval2,eval1;
+for(int i=0;i<=len-2;i++){
+	for(int j=i+1;j<=len-1;j++){
+		for(int k=i;k<=j;k++){
+			int eval1=evalute(str,0,k);
+		     int eval2=evalute(str,k+1,j);
+			int eval;
+			eval=eval1+eval2;
+			if(eval%2==0|| eval%3==0|| eval%5==0|| eval%7==0){
+				cnt++;
+			}
+			eval=eval1-eval2;
+			if(eval%2==0|| eval%3==0|| eval%5==0|| eval%7==0){
+							cnt++;
+						}
+		}
+	}
+}
+}
+

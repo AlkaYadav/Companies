@@ -1,0 +1,30 @@
+/*
+ * testCompare.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+
+
+#include<algorithm>
+#include<vector>
+#include<iostream>
+using namespace std;
+
+int compare(int a,int b){
+	return a>b;
+}
+int main(){
+	int a[]={1,5,2,7,3,2};
+	vector<int> v(a,a+6);
+	sort(a,a+6,compare);
+	qsort(&v[0],v.size(),sizeof(int),compare);
+	make_heap(v.begin(),v.end(),compare);
+	for(int i=0;i<6;i++){
+		cout<<v[0]<<" ";
+		pop_heap(v.begin(),v.end(),compare);
+		v.pop_back();
+	}
+	return 0;
+}

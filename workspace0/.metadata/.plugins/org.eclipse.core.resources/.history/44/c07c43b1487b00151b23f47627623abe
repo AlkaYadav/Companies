@@ -1,0 +1,26 @@
+//============================================================================
+// Name        : Adobe.cpp
+// Author      : alkayadav
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+struct node{
+	int data;
+	struct node* left;
+	struct node* right;
+};
+
+struct node newnode(int data){
+	struct node* new_n=(struct node*)malloc(sizeof(struct node));
+	new_n->left=NULL;
+	new_n->right=NULL;
+	new_n->data=data;
+}
+int main() {
+	struct node* root=newNode(5);
+	return 0;
+}

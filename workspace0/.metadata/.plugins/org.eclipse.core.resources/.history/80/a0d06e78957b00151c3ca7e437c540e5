@@ -1,0 +1,32 @@
+/*
+ * count1s.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include<stack>
+#include <iostream>
+#include<stdlib.h>
+#define ROW 50
+#define COL 50
+using namespace std;
+
+int count1s(int a[],int start,int end){
+	if(start>end){
+		return 0;
+	}
+	if(a[start]==0)
+		return 0;
+	int mid=(start+end)/2;
+	if(a[start]==1 && a[end]==0){
+		return count1s(a,start,mid);
+	}
+	if(a[start]==1&& a[start+1]==0){
+		return start+1;
+	}
+	if(a[start]==1&& a[end]==1){
+		return count1s(a,mid+1,end);
+	}
+}
+

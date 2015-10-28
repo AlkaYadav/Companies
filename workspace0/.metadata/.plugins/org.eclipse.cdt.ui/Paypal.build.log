@@ -1,0 +1,9 @@
+15:53:46 **** Incremental Build of configuration Debug for project Paypal ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\matrixChainMultiplication.o" "..\\src\\matrixChainMultiplication.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\subsetSum.o" "..\\src\\subsetSum.cpp" 
+g++ -o Paypal.exe "src\\subsetSum.o" "src\\palinPartition.o" "src\\minimumCoins.o" "src\\minJumps.o" "src\\minCoins.o" "src\\matrixChainMultiplication.o" "src\\longestPalinSubstring.o" "src\\longestPalinSubseq.o" "src\\longestCommonsubseq.o" "src\\cutRod.o" "src\\coinChangeNoWays.o" "src\\LongestIncreasingSubseq.o" "src\\0-1Knapsack.o" 
+
+15:53:48 Build Finished (took 1s.929ms)
+

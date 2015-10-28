@@ -1,0 +1,39 @@
+//============================================================================
+// Name        : Codenation.cpp
+// Author      : alkayadav
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+/*
+ * Given range of length of three sides of a rectangle as l1,u1,l2,u2,l3,u3.
+ * Here (l1,u1) is min­max length of the base and other two are sides with right angle.
+ * You have to find out possible min­max length of 4th side which can be connected with
+ * two sides.
+ * Here angle between 4th side and 2nd,3rd need not to be right angle.
+ */
+#include <iostream>
+using namespace std;
+
+int main() {
+	int l1,u1,l2,u2,l3,u3,l4,u4;
+	cout<<"Enter the length "<<endl;
+	cin>>l1>>u1;
+	cin>>l2>>u2;
+	cin>>l3>>u3;
+
+	//calculate perpendicular
+	int perp;
+	if(u2>u3){
+		maxu=u2;
+		minl=l3;
+	}
+	else{
+		maxu=u3;
+		minl=l2;
+	}
+	perp=maxu-minl;
+	int ans=sqrt(u1*u1+perp*perp);
+	cout<<"Ans is "<<u1<<" "<<ans<<endl;
+	return 0;
+}

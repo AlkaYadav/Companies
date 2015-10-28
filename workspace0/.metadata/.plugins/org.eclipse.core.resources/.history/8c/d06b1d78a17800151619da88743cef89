@@ -1,0 +1,87 @@
+/*
+ * removeRepeatedChar.cpp
+ *
+ *  Created on: Oct 22, 2015
+ *      Author: user
+ */
+
+//characters(ea Given a string(all characters are az)
+//, you have to
+//remove repeated ch character can occur only once) while preserving
+//ordering. Resulted string should be lexicographically smallest.
+
+#include <iostream>
+#include<vector>
+#include<climits>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+using namespace std;
+
+void removeRepeatedLexicSmallest(string str){
+	int len=str.length();
+	bool visited[26],nextoccur[len];
+	map<char,int> m;
+	for(int i=0;i<26;i++){
+		visited[i]=false;
+
+		}
+	for(int i=0;i<len;i++){
+		nextoccur[i]=-1;
+
+	}
+	for(int i=0;i<len;i++){
+		if(m[str[i]]>0){
+
+			nextoccur[m[str[i]]-1]=i;
+			m[str[i]]=i+1;
+		}
+		else{
+			m[str[i]]=i+1;
+		}
+	}
+	cout<<"Str "<<" nextoccur "<<endl;
+	for(int i=0;i<len;i++){
+		cout<<str[i]<<" "<<nextoccur[i]<<endl;
+	}
+	string res;
+
+	for(int i=0;i<len;i++){
+
+		if(visited[str[i]-'a']==true){
+			continue;
+		}
+
+		if(nextoccur[i]==-1){
+			visited[str[i]-'a']=true;
+			res+=str[i];
+		}
+		else{
+			char smaller=str[i];
+			int k=i+1;
+			while(k<len){
+
+				if(visited[str[k]-'a']==false && str[k]<=smaller){
+					smaller=str[k];
+				}
+				if(nextoccur[k]==-1){
+									break;
+				}
+				k++;
+			}
+			if(smaller>=str[i]){
+			visited[str[i]-'a']=true;
+			res+=str[i];
+			}
+		}
+	}
+
+	cout<<res<<endl;
+}
+
+int main(){
+	string str="bacdbcb";
+	removeRepeatedLexicSmallest(str);
+}

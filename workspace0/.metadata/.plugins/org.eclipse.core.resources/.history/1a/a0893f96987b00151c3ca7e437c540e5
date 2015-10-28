@@ -1,0 +1,14 @@
+/*
+ * integerendingwith3.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+//4.	Every integer ending with 3 has at least one multiple which is made of only 1s. Ex. 3 has 111, 13 has 111111. Given integer n(LSD is 3),
+//return its smallest such multiple
+
+
+int integerEndingWith3(int num){
+
+}

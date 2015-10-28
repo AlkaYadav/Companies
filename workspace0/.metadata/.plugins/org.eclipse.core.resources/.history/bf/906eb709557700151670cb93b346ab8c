@@ -1,0 +1,13 @@
+/*
+ * connectedIslands.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+#define ROW 100
+#define COL 100
+
+void connectedIslands(int a[ROW][COL],int m,int n){
+
+}

@@ -1,0 +1,30 @@
+02:01:37 **** Rebuild of configuration Debug for project GeeksQuestions ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\shortestCommonSuperseq.o" "..\\src\\shortestCommonSuperseq.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\boNGirl.o" "..\\src\\boNGirl.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\unionfind\\hackunionfind.o" "..\\src\\unionfind\\hackunionfind.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\test.o" "..\\src\\test.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\longestRepeatingSubseq.o" "..\\src\\longestRepeatingSubseq.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\stringReverse.o" "..\\src\\stringReverse.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\oz.o" "..\\src\\oz.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\heap.o" "..\\src\\heap.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\binarySum.o" "..\\src\\binarySum.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\powerMAtrixSimple.o" "..\\src\\powerMAtrixSimple.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\contiguousSum.o" "..\\src\\contiguousSum.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\tasks.o" "..\\src\\tasks.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\subsets.o" "..\\src\\subsets.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ladderride.o" "..\\src\\ladderride.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\inversionCount.o" "..\\src\\inversionCount.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\unionfind\\unionFind.o" "..\\src\\unionfind\\unionFind.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\divisors.o" "..\\src\\divisors.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\powerOfMatrix.o" "..\\src\\powerOfMatrix.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\RK.o" "..\\src\\RK.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\possiblePartitions.o" "..\\src\\possiblePartitions.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\GeeksQuestions.o" "..\\src\\GeeksQuestions.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\rearrangeLinkedList.o" "..\\src\\rearrangeLinkedList.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\icpcteammgmt.o" "..\\src\\icpcteammgmt.cpp" 
+g++ -o GeeksQuestions.exe "src\\unionfind\\unionFind.o" "src\\unionfind\\hackunionfind.o" "src\\test.o" "src\\tasks.o" "src\\subsets.o" "src\\stringReverse.o" "src\\shortestCommonSuperseq.o" "src\\rearrangeLinkedList.o" "src\\powerOfMatrix.o" "src\\powerMAtrixSimple.o" "src\\possiblePartitions.o" "src\\oz.o" "src\\longestRepeatingSubseq.o" "src\\ladderride.o" "src\\inversionCount.o" "src\\icpcteammgmt.o" "src\\heap.o" "src\\divisors.o" "src\\contiguousSum.o" "src\\boNGirl.o" "src\\binarySum.o" "src\\RK.o" "src\\GeeksQuestions.o" 
+
+02:01:42 Build Finished (took 5s.237ms)
+

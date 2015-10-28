@@ -1,0 +1,16 @@
+/*
+ * distinctPalinSubstr.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+using namespace std;
+
+void distinctPalinSubstr(string str){
+	int len=str.length();
+	bool table[]
+}
+
+

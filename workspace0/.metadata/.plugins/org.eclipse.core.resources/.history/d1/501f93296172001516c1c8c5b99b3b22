@@ -1,0 +1,21 @@
+/*
+ * insertSpaces.cpp
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: user
+ */
+
+
+void printSpacesBetweenString(char str[],char buff[],int index,int ind_buff,int len){
+	if(index==len){
+		buff[ind_buff]='\0';
+		cout<<buff<<endl;
+	}
+	buff[ind_buff]=str[index];
+	printSpacesBetweenString(str,buff,index+1,ind_buff+1,len);
+
+	buff[ind_buff]=' ';
+	buff[ind_buff+1]=str[index];
+	printSpacesBetweenString(str,buff,index+1,ind_buff+2,len);
+}
+

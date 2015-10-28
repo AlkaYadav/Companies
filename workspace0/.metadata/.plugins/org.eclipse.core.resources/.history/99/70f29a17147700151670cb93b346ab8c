@@ -1,0 +1,12 @@
+/*
+ * matrixChainMultiplication.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+
+void matrixChain(int p[],int n){
+
+}
+

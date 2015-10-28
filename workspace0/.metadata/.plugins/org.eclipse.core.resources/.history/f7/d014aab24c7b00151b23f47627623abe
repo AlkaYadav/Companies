@@ -1,0 +1,17 @@
+/*
+ * findMaxThree.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+
+
+
+int main(){
+	int a=3;
+	int b=5;
+	int c=8;
+	int largest=(a>b)?(a>c)?a:c:(b>c)?b:c;
+	cout<<"Largest "<<largest<<endl;
+}

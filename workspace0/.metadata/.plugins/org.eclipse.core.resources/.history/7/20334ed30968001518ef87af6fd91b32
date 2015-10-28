@@ -1,0 +1,21 @@
+/*
+ * printPrimeFactors.cpp
+ *
+ *  Created on: Oct 1, 2015
+ *      Author: user
+ */
+//Efficient program to print all prime factors of a given number
+
+#include<map>
+#include<math.h>
+using namespace std;
+
+void printPrimeFactor(int n){
+	for(int i=2;i<sqrt(n);i++){
+
+	}
+}
+
+
+
+

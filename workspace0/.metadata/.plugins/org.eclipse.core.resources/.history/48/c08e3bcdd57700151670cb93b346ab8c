@@ -1,0 +1,73 @@
+/*
+ * lexiPermutation.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+//lexicographically­smallest­permutation­given­a-signature
+#include <iostream>
+#include<vector>
+#include<climits>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+using namespace std;
+bool assignAndCheck(vector<int> copy,string sig){
+	string copysig;
+	for(int i=0;i<copy.size()-1;i++){
+		if(copy[i]<copy[i+1]){
+			copysig+='i';
+		}
+		else{
+			copysig+='d';
+		}
+	}
+	if(sig==copysig){
+		return true;
+	}
+	return false;
+}
+void lexicographic(string sig){
+	int len=sig.length();
+	bool visited[len+1];
+	for(int i=0;i<len;i++){
+		visited[i]=false;
+	}
+	vector<int> copy(len+1);
+	for(int i=0;i<=len;i++){
+		copy[i]=i+1;
+	}
+	sort(copy.begin(),copy.end());
+	do{
+		bool flag=assignAndCheck(copy,sig);
+		if(flag){
+			for(int i=0;i<len;i++){
+				//cout<<copy[i]<<" ";
+				visited[copy[i]]=true;
+				cout<<copy[i]<<" viisted"<<endl;
+			}
+			int indx;
+			for(int i=0;i<len;i++){
+				if(visited[i]==false){
+					indx=i;
+					break;
+				}
+			}
+			copy[len]=indx;
+			for(int i=0;i<=len;i++){
+							cout<<copy[i]<<" ";
+			}
+			cout<<endl;
+			break;
+		}
+	}while(next_permutation(copy.begin(),copy.end()));
+}
+
+int main(){
+	string sig="di";
+	lexicographic(sig);
+
+}

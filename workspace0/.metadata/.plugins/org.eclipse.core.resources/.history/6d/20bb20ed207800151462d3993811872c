@@ -1,0 +1,62 @@
+
+#include <iostream>
+#include<vector>
+#include<climits>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+#define ROW 100
+#define COL 100
+using namespace std;
+
+void minJumps(int grid[ROW][COL],int rows,int cols){
+	int jumps[rows][cols];
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			jumps[i][j]=INT_MAX;
+		}
+	}
+
+	if(grid[0][0]>0){
+		jumps[0][0]=0;
+	}
+	else{
+		return;
+	}
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			if(jumps[i][j]!=INT_MAX){
+
+
+				if(i+grid[i][j]<rows){
+				jumps[i+grid[i][j]][j]=min(jumps[i+grid[i][j]][j],1+jumps[i][j]);
+				}
+
+				if(j+grid[i][j]<cols)
+				jumps[i][j+grid[i][j]]=min(1+jumps[i][j],jumps[i][j+grid[i][j]]);
+
+
+
+		}
+	}
+
+}
+
+	cout<<"Jumps are "<<jumps[rows-1][cols-1]<<endl;
+}
+
+int main(){
+	int rows=2;
+	int cols=4;
+	int a[ROW][COL];
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			cin>>a[i][j];
+		}
+	}
+	minJumps(a,rows,cols);
+}
+
+

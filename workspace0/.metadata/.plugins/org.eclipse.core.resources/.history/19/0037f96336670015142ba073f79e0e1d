@@ -1,0 +1,28 @@
+/*
+ * maxSumRotation.cpp
+ *
+ *  Created on: Sep 30, 2015
+ *      Author: user
+ */
+//Find maximum value of Sum( i*arr[i]) with only rotations
+//on given array allowed
+
+void maxSum(int arr[],int len){
+	int copyarr[2*len];
+	for(int i=0;i<len;i++){
+		copyarr[i]=arr[i];
+		copyarr[i+len]=arr[i];
+	}
+
+	int maxsum=0,sum;
+	for(int i=0;i<len;i++){
+	sum=0;
+		for(int j=i;j<i+len;j++){
+		sum=sum+(j-i)*copyarr[j];
+		}
+		if(sum>maxsum){
+			sum=maxsum;
+		}
+	}
+
+

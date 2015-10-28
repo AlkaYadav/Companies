@@ -1,0 +1,61 @@
+/*
+ * lexiPermutation.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+//lexicographically­smallest­permutation­given­a-signature
+// Suppose if the input signature is DDIIDI Many Permutations
+//are possible like 5324617, 4325617
+//But the lexicographically smallest permutation is 3214657.
+
+#include <iostream>
+#include<vector>
+#include<climits>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+using namespace std;
+bool assignAndCheck(vector<int> copy,string sig){
+	string copysig;
+	for(int i=0;i<copy.size()-1;i++){
+		if(copy[i]<copy[i+1]){
+			copysig+='I';
+		}
+		else{
+			copysig+='D';
+		}
+	}
+	if(sig==copysig){
+		return true;
+	}
+	return false;
+}
+
+void lexiSmallest(string sig){
+	int len=sig.length();
+	string copysig=sig;
+	vector<int> v(len+1);
+	bool flag=false;
+	for(int i=0;i<=len;i++){
+		v[i]=i+1;
+	}
+	do{
+		flag=assignAndCheck(v,sig);
+		if(flag){
+			for(int i=0;i<v.size();i++){
+				cout<<v[i]<<" ";
+			}
+			cout<<endl;
+			break;
+		}
+	}while(next_permutation(v.begin(),v.end()));
+}
+int main(){
+	string sig="DDIIDI";
+	//lexicographic(sig);
+	lexiSmallest(sig);
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+// M is number of applicants and N is number of jobs
+#define M 6
+#define N 6
+
+int maxBPM(bool bpGraph[M][N]){
+	int cnt=0;
+	for(int i=0;i<M;i++){
+
+	}
+}
+int main()
+{
+    // Let us create a bpGraph shown in the above example
+    bool bpGraph[M][N] = {  {0, 1, 1, 0, 0, 0},
+                        {1, 0, 0, 1, 0, 0},
+                        {0, 0, 1, 0, 0, 0},
+                        {0, 0, 1, 1, 0, 0},
+                        {0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 1}
+                      };
+
+    cout << "Maximum number of applicants that can get job is "
+         << maxBPM(bpGraph);
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+/*
+ * findMaxThree.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+
+struct linkedNode{
+	int data;
+	struct linkedNode* next;
+};
+
+struct linkedNode* newnode(int data){
+	struct linkedNode* new_n=(struct linkedNode*)malloc(sizeof(struct linkedNode));
+		new_n->next=NULL;
+		new_n->data=data;
+		return new_n;
+}
+
+int main(){
+	int a=23;
+	int b=15;
+	int c=6;
+	int largest=(a>b)?(a>c)?a:c:(b>c)?b:c;
+	cout<<"Largest "<<largest<<endl;
+}

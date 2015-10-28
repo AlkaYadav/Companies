@@ -1,0 +1,13 @@
+/*
+ * palinPartition.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+void minimumPalnPartition(string str){
+	int len=str.length();
+	bool P[]
+}
+
+

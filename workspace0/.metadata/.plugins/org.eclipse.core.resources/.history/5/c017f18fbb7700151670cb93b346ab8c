@@ -1,0 +1,37 @@
+/*
+ * rootToLeafSum.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+//Given a binary tree and a number . If the tree has a roottoleaf
+//path such that adding up all
+//the values along the path equals the given number, return depth of that leaf (minimum, if
+//multiple paths), Return -1
+//if no such path can be found.
+
+
+#include <iostream>
+#include<vector>
+#include<climits>
+#include<algorithm>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+#define ROW 100
+#define COL 100
+using namespace std;
+
+struct Node{
+	int data;
+	struct Node* left;
+	struct Node* right;
+};
+
+void rootToLeafMinDepth(struct Node* root,int sum,int &depth,int curr_sum){
+	if(root==NULL){
+		return;
+	}
+	if(root->l)
+}
+

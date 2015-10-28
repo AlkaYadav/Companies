@@ -1,0 +1,23 @@
+/*
+ * lexiSmallestPermutation.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<vector>
+#include<climits>
+#include<string>
+#include<algorithm>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+using namespace std;
+
+//lexicographically smallest permutation given as signature
+void lexicoSmallestPermutation(string str){
+
+}
+
+

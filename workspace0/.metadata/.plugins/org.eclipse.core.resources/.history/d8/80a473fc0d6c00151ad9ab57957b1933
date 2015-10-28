@@ -1,0 +1,71 @@
+/*
+ * powerMAtrixSimple.cpp
+ *
+ *  Created on: Oct 6, 2015
+ *      Author: user
+ */
+
+#include<iostream>
+using namespace std;
+
+void identityMatrix(int res[][2],int size){
+	for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+			if(i==j){
+				res[i][j]=1;
+			}
+			else{
+				res[i][j]=0;
+			}
+		}
+	}
+}
+
+void multiply(int A[][2],int B[][2]){
+	for(int i=0;i<26;i++){
+		for(int j=0;j<26;j++){
+			int sum=0;
+			for(int k=0;k<26;k++){
+				sum+=A[i][k]*B[k][j];
+
+			}
+			A[i][j]=sum;
+		}
+	}
+}
+
+void power(int mat[][2],int n){
+	int res[2][2];
+	identityMatrix(res,2);
+	while(n-1){
+		if(n%2==0){
+			multiply(mat,mat);
+			n=n/2;
+		}
+		else{
+			multiply(res,mat);
+			n--;
+		}
+	}
+}
+
+void printMatrix(int mat[][2],int size){
+	for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+			cout<<mat[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+}
+int main(){
+	int mat[2][2];
+	for(int i=0;i<2;i++){
+		for(int j=0;j<2;j++){
+			cin>>mat[i][j];
+		}
+	}
+	power(mat,2);
+	printMatrix(mat,2);
+}
+
+

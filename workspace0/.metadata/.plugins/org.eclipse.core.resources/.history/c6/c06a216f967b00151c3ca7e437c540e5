@@ -1,0 +1,56 @@
+/*
+ * count1s.cpp
+ *
+ *  Created on: Oct 26, 2015
+ *      Author: user
+ */
+
+#include<stack>
+#include <iostream>
+#include<stdlib.h>
+#define ROW 50
+#define COL 50
+using namespace std;
+
+int count1s(int a[],int start,int end){
+	if(start>end){
+		return 0;
+	}
+	if(a[start]==0)
+		return 0;
+	if(start==end && a[start]==1){
+		return start+1;
+	}
+	int mid=(start+end)/2;
+	if(a[start]==1 && a[end]==0){
+		return count1s(a,start,mid);
+	}
+	if(a[start]==1&& a[start+1]==0){
+		return start+1;
+	}
+
+		return count1s(a,mid+1,end);
+
+}
+
+int rowWithMax1s(int mat[ROW][COL],int row,int col){
+	int max_cnt=INT_MIN,curr_cnt=0,rowindex;
+	for(int i=0;i<row;i++){
+		for(int j=0;j<col;j++){
+			curr_cnt=count1s(mat[i],0,col-1);
+			if(curr_cnt>max_cnt){
+				rowindex=i;
+				max_cnt=curr_cnt;
+		}
+	}
+}
+
+int main(){
+	int mat[ROW][COL]={ {0, 0, 0, 1},
+	        {0, 1, 1, 1},
+	        {1, 1, 1, 1},
+	        {0, 0, 0, 0}
+	    };
+
+	};
+}

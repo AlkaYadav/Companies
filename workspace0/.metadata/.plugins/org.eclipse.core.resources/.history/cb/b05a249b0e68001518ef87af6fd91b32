@@ -1,0 +1,21 @@
+/*
+ * measureOneLitre.cpp
+ *
+ *  Created on: Oct 1, 2015
+ *      Author: user
+ */
+
+//Measure one litre using two vessels and infinite water supply
+
+void measureOneLitre(int capacity1,int capacity2){
+	if(capacity1<capacity2){
+		v1capacity=capacity1;
+		v2capacity=capacity2;
+	}
+	else{
+		v1capacity=capacity2;
+		v2capacity=capacity1;
+	}
+}
+
+

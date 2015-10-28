@@ -1,0 +1,60 @@
+/*
+ * connectedIslands.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+#define ROW 100
+#define COL 100
+
+bool isSafe(int next_x,int next_y,int a[ROW][COL],bool visited[ROW][COL],int rows,int cols){
+	if(next_x<0 || next_x>=rows||visited[next_x][next_y] ||next_y<0 || next_y>=cols ){
+		return false;
+	}
+	return true;
+}
+void DFSUtil(int a[ROW][COL],bool visited[ROW][COL],int i,int j,int rows,int cols){
+
+	int x[]={};
+	int y[]={};
+	for(int i=0;i<8;i++){
+		int next_x=i+x[i];
+		int next_y=i+y[i];
+		if(isSafe(next_x,next_y,a,visited,rows,cols)){
+			visited[next_x][next_y]=true;
+			DFSUtil(a,visited,next_x,next_y,rows,cols);
+		}
+	}
+}
+void connectedIslands(int a[ROW][COL],int m,int n){
+bool visited[ROW][COL];
+for(int i=0;i<m;i++){
+	for(int j=0;j<n;j++){
+		visited[i][j]=false;
+	}
+}
+
+int cnt=0;
+
+for(int i=0;i<m;i++){
+	for(int j=0;j<n;j++){
+		if(visited[i][j]==false){
+			cnt++;
+			DFSUtil(a,visited,i,j,m,n);
+		}
+	}
+}
+}
+
+int main(){
+	int rows=5;
+	int cols=5;
+	int a[ROW][COL]= {  {1, 1, 0, 0, 0},
+	        {0, 1, 0, 0, 1},
+	        {1, 0, 0, 1, 1},
+	        {0, 0, 0, 0, 0},
+	        {1, 0, 1, 0, 1}
+	    };
+
+}

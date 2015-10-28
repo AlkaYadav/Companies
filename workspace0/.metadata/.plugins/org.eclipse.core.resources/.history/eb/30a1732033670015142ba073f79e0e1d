@@ -1,0 +1,29 @@
+/*
+ * transformStrings.cpp
+ *
+ *  Created on: Sep 30, 2015
+ *      Author: user
+ */
+
+
+void transformOneStringToAnother(string a,string b){
+	int len1=a.length();
+	int len2=b.length();
+	if(len!=len2){
+		return;
+	}
+
+	//Check if they have same set of characters
+	int i=len1;
+	int j=len2;
+	while(i>=0 && j>=0){
+		if(a[i]==b[j]){
+			i--;
+			j--;
+		}
+		else{
+			moveCharacterAhead(a,i);
+		}
+	}
+}
+

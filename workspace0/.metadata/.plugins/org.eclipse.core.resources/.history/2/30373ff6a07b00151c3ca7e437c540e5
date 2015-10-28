@@ -1,0 +1,39 @@
+//============================================================================
+// Name        : Citrix.cpp
+// Author      : alkayadav
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+//Find the number of connected 1s in matrix
+
+#include <iostream>
+#define ROW 50
+#define COL 50
+using namespace std;
+
+int connectedComponent(int mat[ROW][COL],int row,int col){
+	bool visited[ROW][COL];
+	for(int i=0;i<row;i++){
+		for(int j=0;j<col;j++){
+			mat[i][j]=false;
+		}
+	}
+
+	for(int i=0;i<row;i++){
+		for(int j=0;j<col;j++){
+
+		}
+	}
+}
+int main() {
+	int mat[ROW][COL]={  {1, 1, 0, 0, 0},
+	        {0, 1, 0, 0, 1},
+	        {1, 0, 0, 1, 1},
+	        {0, 0, 0, 0, 0},
+	        {1, 0, 1, 0, 1}
+	    };
+
+	return 0;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;eBay/src/eBay.cpp&apos; to &apos;sequence.cpp&apos;" description="Rename resource &apos;eBay.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/eBay.cpp" name="sequence.cpp" stamp="1445871017029" updateReferences="true"/>
+</session>

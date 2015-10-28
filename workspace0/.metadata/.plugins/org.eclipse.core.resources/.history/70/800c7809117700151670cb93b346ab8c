@@ -1,0 +1,29 @@
+/*
+ * subsetSum.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+void subsetSum(int arr[],int sum,int n){
+	bool subSum[sum+1][n+1];
+	for(int i=0;i<=sum;i++){
+		subSum[i][0]=false;
+	}
+	for(int i=0;i<=n;i++){
+		subSum[0][i]=true;
+	}
+
+	for(int i=1;i<=sum;i++){
+		for(int j=1;j<=n;j++){
+			if(i>=arr[j-1]){
+				subSum[i][j]=subSum[i-arr[j-1]][j-1]|| subSum[i][j-1];
+			}
+			else{
+				subSum[i][j]=subSum[i][j-1];
+			}
+		}
+	}
+}
+
+

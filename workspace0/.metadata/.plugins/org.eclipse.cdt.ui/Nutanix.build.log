@@ -1,0 +1,10 @@
+16:37:11 **** Incremental Build of configuration Debug for project Nutanix ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\2015_\\multiplyBigNos.o" "..\\src\\2015_\\multiplyBigNos.cpp" 
+..\src\2015_\multiplyBigNos.cpp: In function 'void multiplyBigNos(std::string, std::string)':
+..\src\2015_\multiplyBigNos.cpp:31:6: warning: unused variable 'carry' [-Wunused-variable]
+g++ -o Nutanix.exe "src\\postFrompreAndIn.o" "src\\islandRowWiseColWise.o" "src\\connectedIslands.o" "src\\EOF.o" "src\\2015_\\removeRepeatedChar.o" "src\\2015_\\multiplyBigNos.o" "src\\2015_\\minSwap.o" "src\\2015_\\minJumps.o" "src\\2015_\\lexiSmallestPermutation.o" "src\\2015_\\lexiPermutation.o" "src\\2015_\\expression.o" "src\\2015_\\bitonic.o" 
+
+16:37:13 Build Finished (took 1s.986ms)
+

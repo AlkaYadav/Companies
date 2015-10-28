@@ -1,0 +1,18 @@
+/*
+ * longestPalinSubstring.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<string>
+#include<limits.h>
+using namespace std;
+
+int lpsSubstr(string str){
+
+}
+
+
+

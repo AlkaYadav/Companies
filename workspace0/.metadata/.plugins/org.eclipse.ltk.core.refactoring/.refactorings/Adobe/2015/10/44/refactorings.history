@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Adobe/src/Adobe.cpp&apos; to &apos;lca.cpp&apos;" description="Rename resource &apos;Adobe.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Adobe.cpp" name="lca.cpp" stamp="1445798569942" updateReferences="true"/>
+</session>

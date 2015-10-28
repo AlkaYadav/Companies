@@ -1,0 +1,8 @@
+12:05:49 **** Incremental Build of configuration Debug for project Microsoft ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\rootToLeafSum.o" "..\\src\\rootToLeafSum.cpp" 
+g++ -o Microsoft.exe "src\\setBits.o" "src\\rootToLeafSum.o" "src\\palindromeBinary.o" "src\\mirror.o" "src\\largestContiguous___&&&___.o" "src\\kthSmallestRowColSorted.o" "src\\equilIndex.o" 
+
+12:05:51 Build Finished (took 2s.100ms)
+

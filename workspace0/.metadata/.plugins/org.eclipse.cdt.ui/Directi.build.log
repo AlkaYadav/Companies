@@ -1,0 +1,8 @@
+18:15:05 **** Incremental Build of configuration Debug for project Directi ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Knapsack.o" "..\\src\\Knapsack.cpp" 
+g++ -o Directi.exe "src\\Knapsack.o" 
+
+18:15:07 Build Finished (took 1s.803ms)
+

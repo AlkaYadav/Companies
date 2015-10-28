@@ -1,0 +1,13 @@
+02:01:42 **** Rebuild of configuration Debug for project MathematicalAlgorithms ****
+Info: Configuration "Debug" uses tool-chain "MinGW GCC" that is unsupported on this system, attempting to build anyway.
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\printPrimeFactors.o" "..\\src\\printPrimeFactors.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\randomGenerator.o" "..\\src\\randomGenerator.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\random.o" "..\\src\\random.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\measureOneLitre.o" "..\\src\\measureOneLitre.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\combination.o" "..\\src\\combination.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\MathematicalAlgorithms.o" "..\\src\\MathematicalAlgorithms.cpp" 
+g++ -o MathematicalAlgorithms.exe "src\\randomGenerator.o" "src\\random.o" "src\\printPrimeFactors.o" "src\\measureOneLitre.o" "src\\combination.o" "src\\MathematicalAlgorithms.o" 
+
+02:01:45 Build Finished (took 2s.663ms)
+

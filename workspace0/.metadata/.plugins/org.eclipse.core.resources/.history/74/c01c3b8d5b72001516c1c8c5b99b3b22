@@ -1,0 +1,17 @@
+/*
+ * Walprime.cpp
+ *
+ *  Created on: Oct 14, 2015
+ *      Author: user
+ */
+
+#include <iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+void calculateWalprime(string str){
+
+}
+

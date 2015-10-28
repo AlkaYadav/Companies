@@ -1,0 +1,25 @@
+/*
+ * mnGrid.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+#define ROW 100
+#define COL 100
+#include<limits.h>
+
+void minPath(int arr[ROW][COL],int rows,int cols){
+	int cost[rows][cols];
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			cost[i][j]=INT_MAX;
+		}
+	}
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			if()
+		}
+	}
+}
+
+

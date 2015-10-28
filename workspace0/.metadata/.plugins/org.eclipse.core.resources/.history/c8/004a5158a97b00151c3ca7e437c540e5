@@ -1,0 +1,21 @@
+//============================================================================
+// Name        : Codenation.cpp
+// Author      : alkayadav
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+/*
+ * Given range of length of three sides of a rectangle as l1,u1,l2,u2,l3,u3.
+ * Here (l1,u1) is min­max length of the base and other two are sides with right angle.
+ * You have to find out possible min­max length of 4th side which can be connected with
+ * two sides.
+ * Here angle between 4th side and 2nd,3rd need not to be right angle.
+ */
+#include <iostream>
+using namespace std;
+
+int main() {
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	return 0;
+}

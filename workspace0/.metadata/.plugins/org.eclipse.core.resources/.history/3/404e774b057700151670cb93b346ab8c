@@ -1,0 +1,12 @@
+/*
+ * cutRod.cpp
+ *
+ *  Created on: Oct 20, 2015
+ *      Author: user
+ */
+
+
+void cutRod(int price[],int n){
+
+}
+

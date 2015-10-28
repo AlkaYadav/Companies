@@ -1,0 +1,41 @@
+/*
+ * mnGrid.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+#define ROW 100
+#define COL 100
+#include<limits.h>
+#include <iostream>
+#include<string>
+#include<climits>
+#include<vector>
+#include<ctime>   //for isUpper
+#include<map>
+using namespace std;
+
+void minPath(int arr[ROW][COL],int rows,int cols){
+	int cost[rows][cols];
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			cost[i][j]=INT_MAX;
+		}
+	}
+	for(int i=0;i<rows;i++){
+		for(int j=0;j<cols;j++){
+			if(arr[i][j]==1){
+				cost[i][j]=max(arr[i-1][j],arr[i][j-1],arr[i-1][j-1]);
+				if(cost[i][j]>0){
+					cost[i][j]=1+cost[i][j];
+				}
+			}
+		}
+	}
+	cout<<"Cost "<<cost[rows-1][cols-1]<<endl;
+}
+
+
+int main(){
+	int a[[]]
+}

@@ -1,0 +1,25 @@
+/*
+ * powerOfMatrix.cpp
+ *
+ *  Created on: Oct 6, 2015
+ *      Author: user
+ */
+
+void multiply(mat,mat){
+
+}
+void powerOfMatrix(int mat[][26],int n){
+	int res[][26]=identityMatrix(26);
+	while(n){
+		if(n%2==0){
+			n=n/2;
+			multiply(mat,mat);
+		}
+		else{
+			n--;
+			multiply(res,mat);
+		}
+	}
+}
+
+

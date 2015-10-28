@@ -1,0 +1,12 @@
+/*
+ * mnGrid.cpp
+ *
+ *  Created on: Oct 21, 2015
+ *      Author: user
+ */
+
+void minPath(int arr[ROW][COL],int rows,int cols){
+
+}
+
+

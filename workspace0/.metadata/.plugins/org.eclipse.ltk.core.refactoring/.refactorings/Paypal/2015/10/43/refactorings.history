@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Paypal/src/Paypal.cpp&apos; to &apos;LongestIncreasingSubseq.cpp&apos;" description="Rename resource &apos;Paypal.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Paypal.cpp" name="LongestIncreasingSubseq.cpp" stamp="1445283998332" updateReferences="true"/>
+</session>
